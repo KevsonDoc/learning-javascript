@@ -1,0 +1,7 @@
+	- Iniciar-se o JavaScript colocantdo a tag <script><script/> antes do body
+	- Processo de carregamento dá página é vertical ou seja ele começa 
+carregando de cimapara baixo.
+	- JavaScript Trabalha com os elementos em tela ou seja com a árvore de 
+elementos (DOM), se colocar o java script para executar antes dá DOM quando 
+encessitar-se de algun elemento no JavaSript na hora que a pagina carregou não 
+poderar acessar.
