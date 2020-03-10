@@ -1,0 +1,22 @@
+	#Variáveis e dados
+	- Definindo uma variavel
+		<script>
+			var nome = "Diego";
+		<script/>
+	- JavaScript não possui tipagem stática mas possui tipagem dinâmica
+		<script>
+			var nome = "The Doctor";
+			var idade = "3000";
+			var peso = 67.5;
+			var humano = false;
+			var lista = ['Diego, Gabriel', 'Lucas'];
+		<script/>
+	- Como criar um objeto no JavaScript
+		<script>
+		var aluno = {
+			nome: 'Diego',
+			idade: 23,
+			peso: 80.5,
+			humano: false
+		};
+		<script/>
