@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+</head>
+
+<body>
+    <script>
+        var a = document.createElement('div');
+        var b = document.createElement('div');
+        //If
+        function retornaSexo(sexo) {
+            //M = Masculino, F = Feminino
+            if (sexo == 'M') {
+                return a = document.write('O sexo é masculino');
+            } else if (sexo == 'F') {
+                return a = document.write('O sexo é feminino')
+            }
+            //Switch case
+            switch (sexo) {
+                case 'M':
+                    b = document.write('Switch: O sexo é masculino');
+                case 'F':
+                    b = document.write('Switch: O sexo é ');
+                default:
+                    b = document.write('Outro')
+            }
+        }
+        var resultado = retornaSexo('F');
+    </script>
+</body>
+
+</html>
