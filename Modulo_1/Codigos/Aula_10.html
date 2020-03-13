@@ -4,15 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula_10</title>
+    <title>Intervalo timeout</title>
 </head>
 
 <body>
     <script>
+        var a = document.createElement('div');
+        var b = false;
+
         function exibeAlgo() {
-            console.log('Hello World')
+            if (b == false) {
+                a = document.write('Hello World');
+                b = true;
+            }
         }
-        setInterval(exibeAlgo(), 10000);
+        setInterval(exibeAlgo, 1000);
+
+        /*O set timeOut vai execultar apenas uma vez*/
+        var c = document.createElement('div');
+
+        function exibeAlgo1() {
+            c = document.write(' ||||||||||||||||||||||| Hello World');
+        }
+        setTimeout(exibeAlgo1, 1000);
     </script>
 </body>
 
