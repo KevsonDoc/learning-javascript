@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula</title>
+</head>
+
+<body>
+    <input type="text" name="nome">
+    <button onclick="add()">Adidionar</button>
+    <ul></ul>
+    <script>
+        /*A partir do seguinte vetor:|| var nomes = ["Diego", "Gebriel", "Lucas"]; ||Preencha uma lista (<ul>) no HTML com os itens do vetor.*/
+        var nomes = ['Diego', 'Gabriel', 'Lucas', 'The Doctor'];
+        var listElement = document.querySelector('ul');
+        var inputElement = document.querySelector('input');
+
+        function addItem(text) {
+            var liElment = document.createElement('li');
+            var nameElement = document.createTextNode(text);
+
+            liElment.appendChild(nameElement);
+            listElement.appendChild(liElment);
+        }
+
+        function add() {
+            addItem(inputElement.value);
+            inputElement.value = "";
+        }
+        for (nome of nomes) {
+            addItem(nome)
+        }
+    </script>
+</body>
+
+</html>
