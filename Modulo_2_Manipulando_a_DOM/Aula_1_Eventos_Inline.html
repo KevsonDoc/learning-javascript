@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula-1-Eventos-Inline</title>
+    <style>
+        #in {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button onclick="mostraAlerta()">Me presione</button>
+    </div>
+    <div id="in" onmouseover="mostraAlerta()">
+        <p>Mova o mouse por cima</p>
+    </div>
+    <script>
+        function mostraAlerta1() {
+            alert('Botão foi clicado')
+        }
+
+        function mostraAlerta1() {
+            alert('Hello Worl')
+        }
+    </script>
+</body>
+
+</html>
