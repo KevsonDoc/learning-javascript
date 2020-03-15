@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercíci 2</title>
+</head>
+
+<body>
+    <button id="btn">Adicionar</button>
+    <script>
+        /*Utilizando o resultado do primeiro desafio, toda vez que  usuário passar o mouse por cima de algun quadrado troque sua coir para uma cor aleatória gerada pela função abaixo.*/
+
+        var btnElement = document.querySelector('body button#btn');
+        var bodyElment = document.querySelector('body');
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        btnElement.onclick = function() {
+            var boxElement = document.createElement('div');
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.backgroundColor = '#f00';
+
+            boxElement.onmouseover = function() {
+                boxElement.style.backgroundColor = getRandomColor();
+                var boxElement1 = document.createElement('div');
+                boxElement1.style.height = '100px';
+                boxElement1.style.left = '100px';
+                boxElement1.style.backgroundColor = '#f00';
+                boxElement1.style.backgroundColor = getRandomColor();
+                bodyElment.appendChild(boxElement1);
+                boxElement1.onmouseover = function() {
+                    boxElement1.style.backgroundColor = getRandomColor();
+                }
+            }
+            bodyElment.appendChild(boxElement);
+        }
+    </script>
+</body>
+
+</html>

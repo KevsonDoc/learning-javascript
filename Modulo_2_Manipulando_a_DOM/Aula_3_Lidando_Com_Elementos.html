@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_3</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" id="nome">
+    </div>
+    <script>
+        /*Criando uma ancora para o link google.com*/
+        var linkElemnt = document.createElement('a');
+        linkElemnt.setAttribute('href', 'http://google.com');
+
+        /*Cirando um texto e posicionando o link como filho dele ou seja tornando o texto "Acessar um site do Google" um link para o site do google*/
+        var text = document.createTextNode('Acessar site do google');
+        linkElemnt.appendChild(text);
+        /*Colocando o texto com ancora dentro do corpo do html*/
+        var containerElement = document.querySelector('#app');
+        const s = containerElement.appendChild(linkElemnt)
+        s.style.textDecoration = 'none';
+        s.style.color = 'red';
+
+        /*Referenciando o input*/
+        var inputElement = document.querySelector('#nome');
+        s.removeChild(inputElement);
+    </script>
+</body>
+
+</html>

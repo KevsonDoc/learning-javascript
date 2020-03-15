@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Desafio Introdução a JavaScript</title>
+</head>
+
+<body>
+    <script>
+        var rua = "Rua dos Pinheiros";
+        var numero = 1293;
+        var bairro = "Centro";
+        var cidade = "São Paulo";
+        var uf = "SP";
+        console.log('O suario mora em ' + cidade + '/' + uf + ',');
+        console.log('no bairro ' + bairro + ', na rua "' + rua + '"' + ' com');
+        console.log('N° ' + numero);
+
+        //Questão 2 Impa e par
+        function pares(x, y) {
+            for (var i = x; i <= y; i++) {
+                if (i % 2 == 0) {
+                    console.log(i);
+                    console.log('-');
+                }
+            }
+        }
+        pares(32, 321);
+
+        //Questão 3
+        function temHabilidade(skills, find) {
+            for (var i = 0; i < skills.length; i++) {
+                if (skills.indexOf('Javascript') == find) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        var skill = ['javascript', 'reactjs', 'React native'];
+        var resultado = temHabilidade('javascript', 'javascript');
+        console.log(resultado);
+
+        //Questão 4
+        function experiencia(anos) {
+            if (anos >= 0 && anos <= 1) {
+                return 'iniciante';
+            } else if (anos >= 3 && anos <= 1) {
+                return 'intermediarios';
+            } else if (anos >= 3 && anos <= 6) {
+                return 'Avançado';
+            } else if (anos >= 7) {
+                return ' Jedi Master';
+            }
+        }
+        var idade = 7;
+        var z = experiencia(idade);
+        console.log(z);
+
+        // Questão 5
+        var usuarios = [{
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        }, {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }];
+        for (let i = 0; i < usuarios.length; i++) {
+            console.log("O " + usuarios[i].nome + " possui as habilidades: " + usuarios[i].habilidades.join(", "));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula2</title>
+    <style>
+        div#app {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome">
+        <button class="botao1">Adicionar</button>
+        <button class="botao">Hello World</button>
+        <input type="text" id="q">
+    </div>
+    <script>
+        /*Referenciando elementos atravé do JavaScript*/
+        var inputElemnt = document.getElementById('nome');
+        inputElemnt = document.getElementsByTagName('nome');
+        console.log(inputElemnt);
+
+        /*QuerrySelect referencia um elemento de cade vex se especificado.*/
+        var inputElemnt1 = document.querySelector('div#app input#q');
+        /*QUerrySelectorAll referencia todos os elementos de uma vez retornando uma colection (Array) cm todos os elentos que pode ser referenciados.*/
+        var inputElemnt2 = document.querySelectorAll('input');
+        console.log(inputElemnt1, inputElemnt2);
+
+
+        /*Referenciando um botão pelo javaScript*/
+        var inputElemnt4 = document.querySelector('input[id=q');
+        var btnElement = document.querySelector('div#app button.botao');
+        btnElement.onclick = function() {
+            var text = inputElemnt4.value;
+            alert(text);
+            l = document.getElementById('app').style.backgroundColor = "blue";
+        }
+    </script>
+</body>
+
+</html>l
