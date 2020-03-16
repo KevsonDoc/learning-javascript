@@ -13,20 +13,23 @@
     <ul></ul>
     <script>
         /*A partir do seguinte vetor:|| var nomes = ["Diego", "Gebriel", "Lucas"]; ||Preencha uma lista (<ul>) no HTML com os itens do vetor.*/
-        var nomes = ['Diego', 'Gabriel', 'Lucas', 'The Doctor'];
-        var listElement = document.querySelector('ul');
-        var inputElement = document.querySelector('input');
 
+        var nomes = ['Diego', 'Gabriel', 'Lucas', 'The Doctor']; //Lista com nomes
+        var listElement = document.querySelector('ul'); //Encontrando a tag ul
+        var inputElement = document.querySelector('input'); //Encontrando a tag input
+
+        /*Adiciona um item a <li> da <ul>*/
         function addItem(text) {
-            var liElment = document.createElement('li');
-            var nameElement = document.createTextNode(text);
+            var liElment = document.createElement('li'); //Cria a <li>
+            var nameElement = document.createTextNode(text); //Cria um texto e passa como parametro o text da função
 
-            liElment.appendChild(nameElement);
-            listElement.appendChild(liElment);
+            liElment.appendChild(nameElement); //posiciona o nameElement(Texto) dentro do <li>
+            listElement.appendChild(liElment); //Posiciona o <li> dentro da ul
         }
 
+        /*Adiciona um item*/
         function add() {
-            addItem(inputElement.value);
+            addItem(inputElement.value); //Pega o item no do <input> e recupera o texto com o .value
             inputElement.value = "";
         }
         for (nome of nomes) {
